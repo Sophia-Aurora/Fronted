@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family:
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    Microsoft Yahei,
+    Hiragino Sans GB,
+    Heiti SC,
+    WenQuanYi Micro Hei,
+    sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.w {
+  width: 1226px;
+  margin: 0 auto;
+}
+/* 头部 */
+/* 左右部分 */
+.header {
+  background-color: #333333;
+  height: 40px;
+  line-height: 40px;
+}
+.header a {
+  display: inline-block;
+  color: #b0b0b0;
+  line-height: 12px;
+  border-left: #424242 solid 2px;
+  padding: 0 5px;
+  font-size: 12px;
+}
+.header a:hover {
+  color: #fff;
+}
+.header-menu li,
+.header-user li {
+  float: left;
+}
+.header-menu {
+  float: left;
+}
+.header-user {
+  float: right;
+}
+/* 特殊的两个 */
+.header .no-left {
+  border-left: none;
+  padding-left: 0;
+}
+/* 购物车部分 */
+.shopping-cart {
+  width: 120px;
+  background-color: #424242;
+  color: #b0b0b0;
+  font-size: 12px;
+  float: right;
+  margin-left: 16px;
+}
+.shopping-cart-icon {
+  height: 25px;
+  width: 25px;
+  fill: #b0b0b0;
+  vertical-align: middle;
+  margin: 0 4px 0 8px;
+}
+.shopping-cart:hover {
+  background-color: #ffffff;
+  color: #ff6700;
+}
+.shopping-cart:hover .shopping-cart-icon {
+  fill: #ff6700;
+}
+/* 导航栏 */
+.nav {
+  background-color: #ffffff;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+}
+/* 图标 */
+.mi-icon {
+  height: 56px;
+  width: 56px;
+  fill: #ff6700;
+}
+/* 悬停在图标上图标会动 */
+.mi-icon:hover {
+  position: relative;
+  left: 1px;
+  top: 1px;
+}
+
+/* 菜单 */
+.nav-menu {
+  margin-left: 150px;
+  line-height: 100px;
+  display: flex;
+  gap: 22px;
+}
+.nav-menu li a {
+  color: #333333;
+  font-size: 18px;
+}
+.nav-menu li a:hover {
+  color: #ff6700;
+}
+/* 搜索框 */
+.nav-search {
+  display: flex;
+  align-items: center;
+}
+.nav-search input:hover,
+.nav-search input:hover + button {
+  border-color: #424242;
+}
+.nav-search input {
+  width: 235px;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+  padding: 8px 12px;
+  outline: none;
+  border-right: none;
+}
+.nav-search button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  color: #fff;
+}
+.nav-search-icon {
+  fill: #616161;
+}
+.nav-search button:hover {
+  background-color: #ff6700;
+  color: #fff;
+  cursor: pointer;
+}
+.nav-search button:hover .nav-search-icon {
+  fill: #fff;
+}
+/* 轮播 */
+.banner {
+  height: 460px;
+  position: relative;
+}
+.banner-left {
+  width: 214px;
+  height: 420px;
+  padding: 20px 0;
+  /* float: left; */
+  background: rgba(105, 101, 101, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* 如果没加这一行就会出现鼠标放在图片上，左边栏会消失的情况 */
+  z-index: 999;
+}
+.banner-left li {
+  height: 42px;
+  line-height: 42px;
+  font-size: 14px;
+  padding: 0 20px;
+}
+.banner-left li:hover {
+  background: #ff6700;
+}
+.banner-left li a {
+  color: #fff;
+}
+.banner-left li span {
+  float: right;
+  color: #fff;
+}
+.banner-right {
+  height: 420px;
+  position: relative;
+}
+.banner-right img {
+  width: 100%;
+  height: 460px;
+}
+.img-left,
+.img-right {
+  position: absolute;
+  /* 以元素顶部为基准，向下50% */
+  top: 50%;
+  /* 在竖直方向向上移动自身高度的50% */
+  transform: translateY(-50%);
+  width: 40px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.img-left {
+  left: 214px;
+  border-radius: 0 5px 5px 0;
+}
+
+.img-right {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.img-left:hover,
+.img-right:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* 商品图1 */
+.goods {
+  height: 170px;
+  margin-top: 14px;
+  margin-bottom: 20px;
+  display: flex;
+}
+.goods-left {
+  width: 234px;
+  height: 170px;
+  background-color: #5f5750;
+  display: flex;
+  flex-wrap: wrap;
+}
+.goods-left > div {
+  width: calc(100% / 3);
+  height: 85px;
+  color: #fff;
+  font-size: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.goods-left svg {
+  fill: #fff;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10px;
+}
+.goods-right {
+  display: flex;
+  gap: 15px;
+  margin-left: 15px;
+}
+.goods-right img {
+  width: 316px;
+  height: 170px;
+}
